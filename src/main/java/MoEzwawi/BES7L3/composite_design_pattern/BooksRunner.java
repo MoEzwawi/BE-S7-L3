@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
+//@Component
 public class BooksRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {

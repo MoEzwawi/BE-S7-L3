@@ -1,11 +1,11 @@
 package MoEzwawi.BES7L3.chain_of_responsibility_pattern;
 
 public class Tenente extends Militare {
-    private final int stipendio = 1000;
 
     @Override
     public boolean guadagnaAlmeno(int confronto) {
-        return this.stipendio >= confronto;
+        int stipendio = 1000;
+        return stipendio >= confronto;
     }
 
     @Override
@@ -13,7 +13,7 @@ public class Tenente extends Militare {
         if (this.guadagnaAlmeno(confronto)){
             System.out.println("Il tenente guadagna più di "+confronto+" €");
         } else{
-            System.out.println("Il tenente guadagna più di "+confronto+" €");
+            System.out.println("Il tenente guadagna meno di "+confronto+" €");
         }
         this.next(confronto);
     }
