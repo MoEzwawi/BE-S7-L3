@@ -13,6 +13,17 @@ public class Chapter implements SomePaper{
             somePaper.print();
         }
     }
+
+    @Override
+    public int getPageNumber() {
+        /*int total = 0;
+        for(SomePaper somePaper : content){
+            total += somePaper.getPageNumber();
+        }
+        return total;*/
+        return content.stream().mapToInt(SomePaper::getPageNumber).sum();
+    }
+
     public void addSingleContent(SomePaper somePaper){
         this.content.add(somePaper);
     }

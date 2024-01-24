@@ -3,7 +3,7 @@ package MoEzwawi.BES7L3.chain_of_responsibility_pattern;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class CoRRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {

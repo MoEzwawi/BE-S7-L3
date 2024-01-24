@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-//@Component
+@Component
 public class BooksRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
@@ -21,5 +21,6 @@ public class BooksRunner implements CommandLineRunner {
         Book book1 = new Book("Tre uomini e una gamba",12.90,List.of("Aldo","Giovanni","Giacomo"));
         book1.addMultipleContent(List.of(section2,page5));
         book1.print();
+        System.out.println(book1.getPageNumber());
     }
 }

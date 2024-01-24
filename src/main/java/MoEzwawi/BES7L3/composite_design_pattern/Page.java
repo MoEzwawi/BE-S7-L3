@@ -13,4 +13,9 @@ public class Page implements SomePaper{
     public void print() {
         System.out.println(content);
     }
+
+    @Override
+    public int getPageNumber() {
+        return 1;
+    }
 }
