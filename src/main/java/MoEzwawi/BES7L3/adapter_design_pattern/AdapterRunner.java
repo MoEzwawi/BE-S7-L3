@@ -9,9 +9,10 @@ public class AdapterRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("---------------- ADAPTER PATTERN -----------------");
-        DataSource info = new Info("Aldo","Baglio", LocalDate.of(1958,9,20));
+        Info info = new Info("Aldo","Baglio", LocalDate.of(1958,9,20));
+        DataInfoAdapter adaptedInfo = new DataInfoAdapter(info);
         UserData userData1 = new UserData();
-        userData1.setData(info);
+        userData1.setData(adaptedInfo);
         System.out.println(userData1);
     }
 }

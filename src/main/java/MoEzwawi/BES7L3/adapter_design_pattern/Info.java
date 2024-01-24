@@ -10,18 +10,9 @@ import java.time.Period;
 @Getter
 @Setter
 @AllArgsConstructor
-public class Info implements DataSource{
+public class Info{
     private String Nome;
     private String cognome;
     private LocalDate dataDiNascita;
 
-    @Override
-    public String getNomeCompleto() {
-        return this.getNome()+" "+this.cognome;
-    }
-
-    @Override
-    public int getEtà() {
-        return Period.between(this.dataDiNascita,LocalDate.now()).getYears();
-    }
 }
