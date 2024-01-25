@@ -21,6 +21,7 @@ public class BooksRunner implements CommandLineRunner {
         Book book1 = new Book("Tre uomini e una gamba",12.90,List.of("Aldo","Giovanni","Giacomo"));
         book1.addMultipleContent(List.of(section2,page5));
         System.out.println("CIAO A TUTTI!");
+        System.out.println("CIAO A TUTTI DI NUOVO!");
         book1.print();
         System.out.println(book1.getPageNumber());
     }
